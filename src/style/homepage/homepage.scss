@@ -13,9 +13,9 @@
     }
     .formSearch_container{
         .ant-input-group-addon{
-            background: rgb(13, 92, 182) !important;
             button.ant-btn.ant-input-search-button{
                 background: rgb(13, 92, 182) !important;
+                border-color: rgb(13, 92, 182);
             }
         }
     }
@@ -31,7 +31,7 @@
 }
 
 .main_container{
-    padding: 1rem 0;
+    padding:  0 0 2rem 0;
     background: #efefef;
     width: 84%;
     margin: 0 auto;
@@ -39,6 +39,12 @@
     .sectionContainer{
         padding: 1rem 0;
         background: #efefef;
+    }
+
+    .home_top_banner_container{
+        .carousel-dots{
+            margin-top: 0;
+        }
     }
 
     .titleHeading{

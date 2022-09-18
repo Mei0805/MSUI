@@ -1,13 +1,12 @@
 import './App.scss';
 import React from 'react';
 import { Layout } from 'antd';
-import { HomePage } from './components/HomePage/HomePage';
-
+import { Router } from './router/Routes';
 
 function App() {
   return (
     <Layout className='container'>
-          <HomePage />
+          <Router />
     </Layout>
   );
 }

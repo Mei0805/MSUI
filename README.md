@@ -7,7 +7,9 @@
         npm install antd
 3. install react-router-dom: 
         npm i react-router-dom
-4. start project:
+4. instal infinite-react-carousel:
+        npm i infinite-react-carousel
+5. start project:
         npm start
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
