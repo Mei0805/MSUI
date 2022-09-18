@@ -11,28 +11,26 @@ export const HomeBanner = () => {
     ]
 
     return <>
-        <Row 
-            className='home_top_banner_container' 
+        <Row className='home_top_banner_container'
             justify="space-between"
-            gutter={[10, 16]}    
+            gutter={[10, 16]}
         >
-            <Col span={14}>
-                <Slider dots>
+            <Col span={14} >
+                <Slider dots >
                     {imgSrc.map((item, index) => {
                         return <Image
                             height={355}
                             key={index}
                             preview={false}
-                            style={{ }}
-                            src={item.url}
-                        />
+                            style={{}}
+                            src={item.url} />
                     })}
                 </Slider>
-
             </Col>
+            
             <Col span={10}>
-                <Image preview={false} 
-                    style={{ objectFit: 'contain', borderRadius:'3px' }}
+                <Image preview={false}
+                    style={{ objectFit: 'contain', borderRadius: '3px' }}
                     src={'https://salt.tikicdn.com/cache/w750/ts/banner/1f/48/85/1e0d26bf9e0f148402ef6e56ad374941.png.webp'}
                 />
             </Col>

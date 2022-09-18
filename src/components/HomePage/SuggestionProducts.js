@@ -30,7 +30,7 @@ export const SuggestionProduct = () => {
         <Affix offsetTop={0}>
             <div className="sectionContainer">
                 <Row className="titleHeading">
-                    <Col span={24}>
+                    <Col>
                         <h2>Suggestion Today</h2>
                     </Col>
                 </Row>
@@ -41,8 +41,7 @@ export const SuggestionProduct = () => {
                                 <Avatar src={item.img} size={48} />
                                 <p>{item.title}</p>
                             </Button>
-                        ),
-                        )}
+                        ))}
                     </Space>
 
                 </Row>
@@ -59,12 +58,13 @@ export const SuggestionProduct = () => {
                         cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
                     >
                         <Meta title={item.title} />
+
                         <div className="rating">
-                            <Rate disabled defaultValue={item.rating} style={{ fontSize: 12 }} />
-                            <small style={{ color: 'rgb(128, 128, 137)' }}> | Sold: 100++</small>
+                            <Rate defaultValue={item.rating} style={{ fontSize: 12 }} disabled/>
+                            <small style={{ color: 'rgb(128, 128, 137)' }}> | Sold: 100++ </small>
                         </div>
 
-                        <Text strong className="price" type="danger">120.000 đ</Text>
+                        <Text className="price" type="danger" strong>120.000 đ</Text>
 
                     </Card>
                 ),

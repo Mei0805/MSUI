@@ -7,7 +7,6 @@ import { RelatedProduct } from "./RelatedProduct"
 export const ProductDetail = () => {
     return <>
         <BreadCrumb />
-        <h1> Product Detail </h1>
         <ProductItem />
         <RelatedProduct />
     </>

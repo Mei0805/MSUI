@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom';
 const { Content } = Layout;
 
 export const Home = () => {
-    return <>
+    return (
         <Layout className='homePage_container' span={24}>
             <MainHeader />
             <Content className='main_container'>
@@ -16,5 +16,5 @@ export const Home = () => {
             </Content>
             <Footer />
         </Layout>
-    </>
+    )
 }
