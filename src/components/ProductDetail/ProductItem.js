@@ -1,4 +1,4 @@
-import { Avatar, Button, Col, Image, Rate, Row, Space, Descriptions, Badge, Input } from 'antd';
+import { Avatar, Button, Col, Image, Rate, Row, Space, Descriptions, Badge, Input, notification } from 'antd';
 import { StarOutlined, ShopOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -21,6 +21,28 @@ const ProductInfo = () => {
         ((quantity === 0 || quantity < 0) ? quantity = 0 : setQuantity(quantity - 1))
     }
 
+    const handleAddToCart = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+        const key = `open${Date.now()}`;
+        const btn = (
+            <Button className='viewCartBtn' type="primary" onClick={() => notification.close(key)} block>
+                View cart and checkout
+            </Button>
+        );
+        notification.success({
+            message: 'Add to cart successfully!',
+            placement: 'topRight',
+            top: 80,
+            duration: 5,
+            btn, key,
+            style: {
+                fontSize:'14px',
+                padding: '10px',
+                width: 300,
+              }
+        });
+    }
+
     return <>
         <span className='product_price__current-price'>65.000 đ</span>
         <span className='product_price__list-price'>65.000 đ</span>
@@ -33,7 +55,7 @@ const ProductInfo = () => {
             </Button.Group>
         </div>
         <div className='add_to_cart'>
-            <Button type='danger' size='large' className='add_to_cart_btn' block >Buy Now</Button>
+            <Button type='danger' onClick={handleAddToCart} size='large' className='add_to_cart_btn' block >Add To Cart</Button>
         </div>
     </>
 }

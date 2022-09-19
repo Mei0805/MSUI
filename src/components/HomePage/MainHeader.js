@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Badge } from 'antd';
+import { Badge, message, Popconfirm } from 'antd';
 import { Col, Row, Image, Input, Modal, Button, Form } from 'antd';
 import { UserOutlined, SearchOutlined, ShoppingCartOutlined, ClockCircleOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 const { Search } = Input;
 
 export const MainHeader = () => {
+    const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const showModal = () => {
@@ -15,6 +16,10 @@ export const MainHeader = () => {
 
     const handleCancel = () => {
         setIsModalOpen(false);
+    };
+
+    const confirm = () => {
+        message.info('Clicked on Yes.');
     };
 
     return <>
@@ -43,7 +48,7 @@ export const MainHeader = () => {
                         <ShoppingCartOutlined style={{ color: '#fff', fontSize: '32px' }} />
                     </Badge>
                     <div className='user_itemText'>
-                        <Button type="text" style={{ color: '#fff' }} onClick={showModal}>
+                        <Button type="text" style={{ color: '#fff' }} onClick={() => navigate('/cart&checkout')}>
                             Cart
                         </Button>
                     </div>

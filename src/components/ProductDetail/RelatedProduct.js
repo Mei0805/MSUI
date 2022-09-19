@@ -1,9 +1,12 @@
 import Slider from 'infinite-react-carousel';
 import { Row, Col, Card, Rate, Typography } from "antd"
-
 import Meta from "antd/lib/card/Meta";
+
+import { useNavigate } from 'react-router-dom';
+
 const { Text } = Typography;
 export const RelatedProduct = () => {
+    const navigate = useNavigate();
     const productArr = [
         { img: '', title: 'Europe Street beat', price: 120000, rating: 4, soldquantity: 11 },
         { img: '', title: 'Europe Street beat 2', price: 120000, rating: 3, soldquantity: 11 },
@@ -23,7 +26,7 @@ export const RelatedProduct = () => {
                         <Card className="productItem"
                             key={index}
                             hoverable
-                            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                            cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" onClick={()=> navigate(`/product/${item.title}`)}  />}
                         >
                             <Meta title={item.title} />
                             <div className="rating">
