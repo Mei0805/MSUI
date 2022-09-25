@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Badge, message, Popconfirm } from 'antd';
+import { Badge } from 'antd';
 import { Col, Row, Image, Input, Modal, Button, Form } from 'antd';
-import { UserOutlined, SearchOutlined, ShoppingCartOutlined, ClockCircleOutlined } from '@ant-design/icons';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { UserOutlined, SearchOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { Link, useNavigate } from 'react-router-dom';
 
 const { Search } = Input;
 
@@ -18,9 +18,9 @@ export const MainHeader = () => {
         setIsModalOpen(false);
     };
 
-    const confirm = () => {
-        message.info('Clicked on Yes.');
-    };
+    // const confirm = () => {
+    //     message.info('Clicked on Yes.');
+    // };
 
     return <>
         <header className='main_header_container'>

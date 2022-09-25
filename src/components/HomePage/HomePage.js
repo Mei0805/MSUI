@@ -1,10 +1,9 @@
 import '../../style/homepage/homepage.scss'
 // import { Header } from "./Header"
 import { Layout } from 'antd';
-import { MainHeader } from './MainHeader';
-import { Footer } from './Footer';
 import { Outlet } from 'react-router-dom';
-
+import { MainHeader } from './Header';
+import { Footer } from './Footer';
 const { Content } = Layout;
 
 export const Home = () => {
@@ -18,3 +17,4 @@ export const Home = () => {
         </Layout>
     )
 }
+
